@@ -41,8 +41,13 @@ video_switch_status = True
 video_switch_awaiting_change = False
 video_keyboard_keys = [Keycode.CONTROL, Keycode.COMMAND, Keycode.SHIFT, Keycode.S]
 
+# Global Variables
+green = (0, 255, 0)
+red = (255, 0, 0)
+yellow = (255, 255, 0)
+
 # Green When connected
-qtpy_neopixel.fill((0, 255, 0))
+qtpy_neopixel.fill(green)
 
 while True:
     if not mute_switch.value and not mute_switch_awaiting_change:
@@ -64,18 +69,18 @@ while True:
         kbd.release(*video_keyboard_keys)
 
     if not video_switch.value and video_switch_awaiting_change:
-        video_mute_neopixel[0] = (255, 255, 0)
+        video_mute_neopixel[0] = yellow
     elif video_switch_status:
-        video_mute_neopixel[0] = (255, 0, 0)
+        video_mute_neopixel[0] = red
     else:
-        video_mute_neopixel[0] = (0, 255, 0)
+        video_mute_neopixel[0] = green
 
     if not mute_switch.value and mute_switch_awaiting_change:
-        video_mute_neopixel[1] = (255, 255, 0)
+        video_mute_neopixel[1] = yellow
     elif mute_switch_status:
-        video_mute_neopixel[1] = (255, 0, 0)
+        video_mute_neopixel[1] = red
     else:
-        video_mute_neopixel[1] = (0, 255, 0)
+        video_mute_neopixel[1] = green
 
     video_mute_neopixel.show()
     time.sleep(0.01)
