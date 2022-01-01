@@ -61,7 +61,7 @@ Make sure the orientation of the NeoKey is the correct: + - 0 A C on top
 
 ## Software Setup
 
-Now you have set all that up plug it into your computer. I followed this guide [Welcome to CircuitPython](https://learn.adafruit.com/welcome-to-circuitpython?view=all) to setup Micropython. 
+Now you have set all that up plug it into your computer. I followed this guide [Welcome to CircuitPython](https://learn.adafruit.com/welcome-to-circuitpython?view=all) to setup CircuitPython. 
 
 ## Copying Libraries 
 
