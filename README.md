@@ -18,7 +18,7 @@ I'm a frontend software engineer with little to no knowledge of python, know tha
 
 ### Skills
 
-This project requires solidering experience, at least, I can't find the parts used that come pre-solidered. 
+This project requires soldering experience, at least, I can't find the parts used that come pre-soldering. 
 
 ## What you need:
 
@@ -30,7 +30,7 @@ This project requires solidering experience, at least, I can't find the parts us
 
 ## Setup 
 
-Solider the pins on to your QtPy and two NeoKey Sockets push your switches into the sockets
+soldering the header pins on to your QtPy and two NeoKey Sockets push your switches into the sockets
 
 ![image](https://user-images.githubusercontent.com/62559903/147848414-2ec18f04-e60a-4774-9d57-a9b1d42d63b9.png)
 
@@ -48,7 +48,7 @@ Starting on the top:
 - A3 Pin -> NeoKey 1 - I Pin
 
 ** NeoKey 1 ** 
-Make sure the orientation of the NeoKey is the correct: + - 0 A C on top
+Make sure the orientation of the NeoKey is the correct: + - 0 A C on top, NeoPixel on the bottom
 - Positive Pin -> POWER Rail
 - Minus Pin -> GND Rail
 - O Pin -> NeoKey 2 - I Pin
@@ -69,5 +69,5 @@ I had an issue with dragging and dropping libraries in to the due to the limited
 
 ## Libraries 
 
-You add nessessary libraries/dependancies by adding them to lib directory
+You add nessessary libraries/dependancies by adding them to lib directory on the QtPy
 
