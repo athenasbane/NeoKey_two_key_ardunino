@@ -23,7 +23,7 @@ This project requires solidering experience, at least, I can't find the parts us
 ## What you need:
 
 - Breadboard
-- jumper cables 
+- Jumper cables 
 - NeoKey Socket Breakout x 2 - https://www.adafruit.com/product/4978
 - Cherry Mx Keyboard Switch of your choice x 2 - I used Cherry Mx Blues but I which I had used Cherry Mx Black. You can use anything with a Kailh socket
 - QtPy - There's lots of varients I used this one - https://www.adafruit.com/product/4600
