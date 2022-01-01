@@ -1,3 +1,13 @@
+"""
+Two Key mute and video keyboard using NeoKey Sockets
+
+Libraries:
+    adafruit_hid
+    adafruit_pypixelbuf.mpy
+    neopixel.mpy
+
+"""
+
 import time
 import board
 import neopixel
@@ -6,61 +16,66 @@ from adafruit_hid.keyboard import Keyboard
 from adafruit_hid.keycode import Keycode
 from digitalio import DigitalInOut, Direction, Pull
 
-# board neopixel
-pixel1 = neopixel.NeoPixel(board.NEOPIXEL, 1)
-
-# two neo key neopixels
-pixel2 = neopixel.NeoPixel(board.A3, 2)
-
-switch1 = DigitalInOut(board.A1)
-switch1.direction = Direction.INPUT
-switch1.pull = Pull.UP
-switch1_status = False
-switch1_awaiting_change = False
-
-switch2 = DigitalInOut(board.A2)
-switch2.direction = Direction.INPUT
-switch2.pull = Pull.UP
-switch2_status = True
-switch2_awaiting_change = False
-
-pixel1.fill((0, 255, 0))
-
+# Keyboard setup
 kbd = Keyboard(usb_hid.devices)
 
+# board neopixel
+qtpy_neopixel = neopixel.NeoPixel(board.NEOPIXEL, 1)
+
+# The two neo key neopixels
+video_mute_neopixel = neopixel.NeoPixel(board.A3, 2)
+
+# Mute Switch Setup
+mute_switch = DigitalInOut(board.A1)
+mute_switch.direction = Direction.INPUT
+mute_switch.pull = Pull.UP
+mute_switch_status = False
+mute_switch_awaiting_change = False
+mute_keyboard_keys = [Keycode.CONTROL, Keycode.COMMAND, Keycode.SHIFT, Keycode.A]
+
+# Video Switch Setup
+video_switch = DigitalInOut(board.A2)
+video_switch.direction = Direction.INPUT
+video_switch.pull = Pull.UP
+video_switch_status = True
+video_switch_awaiting_change = False
+video_keyboard_keys = [Keycode.CONTROL, Keycode.COMMAND, Keycode.SHIFT, Keycode.S]
+
+# Green When connected
+qtpy_neopixel.fill((0, 255, 0))
+
 while True:
-    if not switch1.value and not switch1_awaiting_change:
-        switch1_awaiting_change = True
-    elif switch1.value and switch1_awaiting_change:
-        switch1_status = not switch1_status
-        switch1_awaiting_change = False
-        kbd.press(Keycode.CONTROL, Keycode.COMMAND, Keycode.SHIFT, Keycode.A)
+    if not mute_switch.value and not mute_switch_awaiting_change:
+        mute_switch_awaiting_change = True
+    elif mute_switch.value and mute_switch_awaiting_change:
+        mute_switch_status = not mute_switch_status
+        mute_switch_awaiting_change = False
+        kbd.press(*mute_keyboard_keys)
         time.sleep(.09)
-        kbd.release(Keycode.CONTROL, Keycode.COMMAND, Keycode.SHIFT, Keycode.A)
+        kbd.release(*mute_keyboard_keys)
 
-    if not switch2.value and not switch2_awaiting_change:
-        switch2_awaiting_change = True
-    elif switch2.value and switch2_awaiting_change:
-        switch2_status = not switch2_status
-        switch2_awaiting_change = False
-        kbd.press(Keycode.CONTROL, Keycode.COMMAND, Keycode.SHIFT, Keycode.S)
+    if not video_switch.value and not video_switch_awaiting_change:
+        video_switch_awaiting_change = True
+    elif video_switch.value and video_switch_awaiting_change:
+        video_switch_status = not video_switch_status
+        video_switch_awaiting_change = False
+        kbd.press(*video_keyboard_keys)
         time.sleep(.09)
-        kbd.release(Keycode.CONTROL, Keycode.COMMAND, Keycode.SHIFT, Keycode.S)
-    
+        kbd.release(*video_keyboard_keys)
 
-    if not switch1.value and switch1_awaiting_change:
-        pixel2[1] = (255, 255, 0)
-    elif switch1_status:
-        pixel2[1] = (255, 0, 0)
+    if not video_switch.value and video_switch_awaiting_change:
+        video_mute_neopixel[0] = (255, 255, 0)
+    elif video_switch_status:
+        video_mute_neopixel[0] = (255, 0, 0)
     else:
-        pixel2[1] = (0, 255, 0)
+        video_mute_neopixel[0] = (0, 255, 0)
 
-    if not switch2.value and switch2_awaiting_change:
-        pixel2[0] = (255, 255, 0)
-    elif switch2_status:
-        pixel2[0] = (255, 0, 0)
+    if not mute_switch.value and mute_switch_awaiting_change:
+        video_mute_neopixel[1] = (255, 255, 0)
+    elif mute_switch_status:
+        video_mute_neopixel[1] = (255, 0, 0)
     else:
-        pixel2[0] = (0, 255, 0)
+        video_mute_neopixel[1] = (0, 255, 0)
 
-    pixel2.show()
+    video_mute_neopixel.show()
     time.sleep(0.01)
