@@ -49,13 +49,13 @@ Starting on the top:
 
 ** NeoKey 1 ** 
 Make sure the orientation of the NeoKey is the correct: + - 0 A C on top
-- + Pin -> POWER Rail
+- Positive Pin -> POWER Rail
 - Minus Pin -> GND Rail
 - O Pin -> NeoKey 2 - I Pin
 - C Pin -> GND Rail
 
 ** NeoKey 2 ** 
-- + Pin -> POWER Rail
+- Positive Pin -> POWER Rail
 - Minus Pin -> GND Rail
 - C Pin -> GND Rail
 
