@@ -1,4 +1,4 @@
-# NeoKey_two_key_ardunino
+# NeoKey Two Key Ardunino
 
 ## Description
 
