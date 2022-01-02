@@ -6,6 +6,8 @@ I wanted a project to have two keys that mute/unmute microphone and turn on and 
 
 ![image](https://user-images.githubusercontent.com/62559903/147848414-2ec18f04-e60a-4774-9d57-a9b1d42d63b9.png)
 
+![demo gif 2](https://user-images.githubusercontent.com/62559903/147878651-672cbb8a-9ed4-4d81-abce-a452696f9b1f.gif)
+
 I thought it suited my needs and would help me learn about microcontrollers so nievely bought the the parts needed. However, I couldn't find a guide for this project anywhere. This was frustrating at first given my very limited knowledge of microcontrollers, CircuitPython (python in general), arduninos etc. I was lost and didn't know where to start. In restrospect however, this has been a great learning experience.
 
 I'll use this project to document my findings so should anyone else have the same issues I faced you have some of the information needed all in one place.
@@ -81,8 +83,6 @@ Now you have set all that up plug it into your computer. I followed this guide [
 I had an issue with dragging and dropping libraries in to the due to the limited storage space on the QT PY so I had to use `cp -X` or `cp -RX` in terminal on mac as the GUI Copy and Paste / move copies something called Extended Attributes (I don't know what they are either).
 
 ## Guide
-
-![DemoGif](https://user-images.githubusercontent.com/62559903/147878001-ad421933-33a8-459a-8e52-335cae7ffc63.gif)
 
 1. Add the libraries listed in code.py to the lib directory on the qtpy
 2. Copy code.py to the root level of the qtpy make sure there is no other file like code copy.py or main.py ect.
