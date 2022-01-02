@@ -2,11 +2,11 @@
 
 ## Description
 
+![demo gif 2](https://user-images.githubusercontent.com/62559903/147878651-672cbb8a-9ed4-4d81-abce-a452696f9b1f.gif)
+
 I wanted a project to have two keys that mute/unmute microphone and turn on and off camera on Zoom with a LED to show if it's both are on or not. I spotted this project:
 
 ![image](https://user-images.githubusercontent.com/62559903/147848414-2ec18f04-e60a-4774-9d57-a9b1d42d63b9.png)
-
-![demo gif 2](https://user-images.githubusercontent.com/62559903/147878651-672cbb8a-9ed4-4d81-abce-a452696f9b1f.gif)
 
 I thought it suited my needs and would help me learn about microcontrollers so nievely bought the the parts needed. However, I couldn't find a guide for this project anywhere. This was frustrating at first given my very limited knowledge of microcontrollers, CircuitPython (python in general), arduninos etc. I was lost and didn't know where to start. In restrospect however, this has been a great learning experience.
 
@@ -23,7 +23,7 @@ I'll use this project to document my findings so should anyone else have the sam
 
 ### Me
 
-I'm a frontend software engineer with little to no knowledge of python, know that you use any code or guidance at your own risk. Given my software experience I am very good at searching for information and debugging. Use this project as a resource not a step by step guide, this is meant to be a learning experience for you also, have fun and experiment for yourself you will likely find things that can be improved. If you do PLEASE TELL ME!
+I'm a frontend software engineer with little, too no knowledge of python, know that you use any code or guidance at your own risk. Given my software experience I am very good at searching for information and debugging. Use this project as a resource not a step by step guide, this is meant to be a learning experience for you also, have fun and experiment for yourself you will likely find things that can be improved. If you do PLEASE TELL ME!
 
 ### Skills
 
@@ -33,6 +33,7 @@ This project requires soldering experience, at least, I can't find the parts use
 
 - Breadboard
 - Jumper cables
+- USB-C Cable
 - NeoKey Socket Breakout x 2 - https://www.adafruit.com/product/4978
 - Cherry Mx Keyboard Switch of your choice x 2 - I used Cherry Mx Blues but I which I had used Cherry Mx Black. You can use anything with a Kailh socket
 - QtPy - There's lots of varients I used this one - https://www.adafruit.com/product/4600
@@ -76,7 +77,7 @@ Make sure the orientation of the NeoKey is the correct: + - 0 A C on top, NeoPix
 
 ## Software Setup
 
-Now you have set all that up plug it into your computer. I followed this guide [Welcome to CircuitPython](https://learn.adafruit.com/welcome-to-circuitpython?view=all) to setup CircuitPython. As I'm a webdev by day I'm alergic to development outside of vscode so Instead of using the Mu IDE that the guide suggests I used the Circuit Python Extension in VSCode
+Now you have set all that up plug it into your computer. I followed this guide [Welcome to CircuitPython](https://learn.adafruit.com/welcome-to-circuitpython?view=all) to setup CircuitPython. As I'm a webdev by day I'm alergic to development outside of vscode so instead of using the Mu IDE that the guide suggests I used the Circuit Python Extension in VSCode
 
 ## Copying Libraries
 
@@ -87,3 +88,17 @@ I had an issue with dragging and dropping libraries in to the due to the limited
 1. Add the libraries listed in code.py to the lib directory on the qtpy
 2. Copy code.py to the root level of the qtpy make sure there is no other file like code copy.py or main.py ect.
 3. Check the lights are correct (closest to the QTPY red furthest green)
+
+#### Zoom Setup
+
+4. Open zoom
+5. Click zoom.us next to the apple logo then preferences or COMMAND + , on the keyboard
+6. Click "Keyboard Shortcuts"
+7. Find "Mute/Unmute My Audio"
+8. Click the shortcut
+9. Press the NeoKey you want to be assigned to microphone
+10. Click the checkbox to Enable Global Shortcut
+11. Find Start/Stop Video
+12. Repeat steps 8,9,10 using the other neokey
+
+(Note: I used COMMAND + CONTROL + SHIFT + A and COMMAND + CONTROL + SHIFT + S you can change these shortcuts in code.py look for "# Change these to what ever suits your use case" )
