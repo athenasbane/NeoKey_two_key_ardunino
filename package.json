@@ -1,0 +1,20 @@
+{
+  "name": "two_key_keyboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "camera_active.js",
+  "scripts": {
+    "start": "node camera_active.js",
+    "dev": "nodemon camera_active.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@serialport/parser-readline": "^9.2.4",
+    "@serialport/parser-ready": "^9.2.4",
+    "serialport": "^9.2.8"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
