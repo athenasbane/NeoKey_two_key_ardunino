@@ -112,4 +112,4 @@ while True:
         video_mute_neopixel[1] = green
 
     video_mute_neopixel.show()
-    time.sleep(.09)
+    time.sleep(.01)
