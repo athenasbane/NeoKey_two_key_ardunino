@@ -74,7 +74,7 @@ Make sure the orientation of the NeoKey is the correct: + - 0 A C on top, NeoPix
 
 ## Software Setup
 
-Now you have set all that up plug it into your computer. I followed this guide [Welcome to CircuitPython](https://learn.adafruit.com/welcome-to-circuitpython?view=all) to setup CircuitPython.
+Now you have set all that up plug it into your computer. I followed this guide [Welcome to CircuitPython](https://learn.adafruit.com/welcome-to-circuitpython?view=all) to setup CircuitPython. As I'm a webdev by day I'm alergic to development outside of vscode so Instead of using the Mu IDE that the guide suggests I used the Circuit Python Extension in VSCode
 
 ## Copying Libraries
 
