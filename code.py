@@ -32,6 +32,7 @@ mute_switch.direction = Direction.INPUT
 mute_switch.pull = Pull.UP
 mute_switch_status = False
 mute_switch_awaiting_change = False
+# Change these to what ever suits your use case 
 mute_keyboard_keys = [Keycode.CONTROL, Keycode.COMMAND, Keycode.SHIFT, Keycode.S]
 
 # Video Switch Setup
@@ -40,6 +41,7 @@ video_switch.direction = Direction.INPUT
 video_switch.pull = Pull.UP
 video_switch_status = True
 video_switch_awaiting_change = False
+# Change these to what ever suits your use case 
 video_keyboard_keys = [Keycode.CONTROL, Keycode.COMMAND, Keycode.SHIFT, Keycode.A]
 
 # Global Variables
@@ -57,11 +59,11 @@ video_off = "VIDEO_OFF"
 # Green When connected
 qtpy_neopixel.fill(green)
 
+# node doesn't send the EOF character so have to loop through
 def non_blocking_read():
     i = ""
     while supervisor.runtime.serial_bytes_available:
         i += sys.stdin.read(1)
-
     return i
 
 while True:
@@ -85,7 +87,6 @@ while True:
         kbd.press(*mute_keyboard_keys)
         time.sleep(.09)
         kbd.release(*mute_keyboard_keys)
-        print('received')
 
     if not video_switch.value and not video_switch_awaiting_change:
         video_switch_awaiting_change = True
@@ -95,7 +96,6 @@ while True:
         kbd.press(*video_keyboard_keys)
         time.sleep(.09)
         kbd.release(*video_keyboard_keys)
-        print('received')
 
     if not video_switch.value and video_switch_awaiting_change:
         video_mute_neopixel[0] = yellow
@@ -113,4 +113,3 @@ while True:
 
     video_mute_neopixel.show()
     time.sleep(.09)
-
