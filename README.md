@@ -102,3 +102,8 @@ I had an issue with dragging and dropping libraries in to the due to the limited
 12. Repeat steps 8,9,10 using the other neokey
 
 (Note: I used COMMAND + CONTROL + SHIFT + A and COMMAND + CONTROL + SHIFT + S you can change these shortcuts in code.py look for "# Change these to what ever suits your use case" )
+
+## TODOS
+
+1. Figure out microphone recognition doesn't look like these a record in the syslogs unfortuately
+2. Create a driver script to install the node portion of this project.
