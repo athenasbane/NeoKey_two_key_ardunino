@@ -1,4 +1,4 @@
-# NeoKey Two Key Ardunino
+# NeoKey Two Key Keyboard
 
 ## Description
 
@@ -27,7 +27,7 @@ I'm a frontend software engineer with little, too no knowledge of python, know t
 
 ### Skills
 
-This project requires soldering experience, at least, I can't find the parts used that come pre-soldering.
+This project requires soldering experience, at least, I can't find the parts used that come pre-soldered.
 
 ## What you need:
 
