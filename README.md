@@ -82,6 +82,8 @@ I had an issue with dragging and dropping libraries in to the due to the limited
 
 ## Guide
 
+![DemoGif](https://user-images.githubusercontent.com/62559903/147878001-ad421933-33a8-459a-8e52-335cae7ffc63.gif)
+
 1. Add the libraries listed in code.py to the lib directory on the qtpy
 2. Copy code.py to the root level of the qtpy make sure there is no other file like code copy.py or main.py ect.
 3. Check the lights are correct (closest to the QTPY red furthest green)
