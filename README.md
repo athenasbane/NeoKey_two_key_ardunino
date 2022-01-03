@@ -8,7 +8,7 @@ I wanted a project to have two keys that mute/unmute microphone and turn on and 
 
 ![image](https://user-images.githubusercontent.com/62559903/147848414-2ec18f04-e60a-4774-9d57-a9b1d42d63b9.png)
 
-I thought it suited my needs and would help me learn about microcontrollers so nievely bought the the parts needed. However, I couldn't find a guide for this project anywhere. This was frustrating at first given my very limited knowledge of microcontrollers, CircuitPython (python in general), arduninos etc. I was lost and didn't know where to start. In restrospect however, this has been a great learning experience.
+I thought it suited my needs and would help me learn about microcontrollers so naievely bought the the parts needed. However, I couldn't find a guide for this project anywhere. This was frustrating at first given my very limited knowledge of microcontrollers, CircuitPython (python in general), arduninos etc. I was lost and didn't know where to start. In retrospect however, this has been a great learning experience.
 
 I'll use this project to document my findings so should anyone else have the same issues I faced you have some of the information needed all in one place.
 
@@ -35,7 +35,7 @@ This project requires soldering experience, at least, I can't find the parts use
 - Jumper cables
 - USB-C Cable
 - NeoKey Socket Breakout x 2 - https://www.adafruit.com/product/4978
-- Cherry Mx Keyboard Switch of your choice x 2 - I used Cherry Mx Blues but I which I had used Cherry Mx Black. You can use anything with a Kailh socket
+- Cherry Mx Keyboard Switch of your choice x 2 - I used Cherry Mx Blues but I wish I had used Cherry Mx Black. You can use anything with a Kailh socket
 - QtPy - There's lots of varients I used this one - https://www.adafruit.com/product/4600
 
 ## Setup
